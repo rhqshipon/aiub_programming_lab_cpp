@@ -7,7 +7,7 @@ void zygote()    {
 
 void check_integer_or_odd() {
     int input;
-    cout << "Provide me a valur for 'a': ";
+    cout << "Provide me a value for 'a': ";
     cin >> input;
     if ( input % 2 == 0)    {
         cout << "even" << endl;
