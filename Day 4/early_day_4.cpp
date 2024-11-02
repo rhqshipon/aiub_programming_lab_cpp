@@ -29,9 +29,80 @@ void eligibility_for_vote()    {
     }
 }
 
+void check_if_leap_year_old()   {
+    int year;
+    cout << "Provide me the year: ";
+    cin >> year;
+    if( year % 4 == 0 && year % 100 != 0 )  {
+        cout << "This is a leap year!" << endl;
+    }
+    else if( year % 100 == 0 && year % 400 != 0 )   {
+        cout << "This is not a leap year!" << endl;
+    }
+    else    {
+        cout << "This is not a leap year!" << endl;
+    }
+}
+
+bool isLeapYear(int year) {
+	if (year % 4 == 0) {
+		if (year % 100 == 0) {
+			if (year % 400 == 0) {
+				return true; // Divisible by 400, so it's a leap year
+			}
+			else {
+				return false; // Divisible by 100 but not 400, not a leap year
+			}
+		}
+		else {
+			return true; // Divisible by 4 but not by 100, so it's a leap year
+		}
+	}
+	else {
+		return false; // Not divisible by 4, not a leap year
+	}
+}
+
+
+void check_if_leap_year()   {
+    int year;
+	cout << "Enter a year: ";
+	cin >> year;
+
+	if (isLeapYear(year)) {
+		cout << year << " is a leap year." << endl;
+	} else {
+		cout << year << " is not a leap year." << endl;
+	}
+}
+
+void calculator()   {
+    float value1, value2;
+    char operatorr;
+    cout << "Type in your expression: " << endl;
+    cin >> value1 >> operatorr >> value2;
+    if (operatorr == '+')    {
+        cout << "       " << value1 + value2 << endl;
+    }
+    else if (operatorr == '-')    {
+        cout << "       " << value1 - value2 << endl;
+    }
+    else if (operatorr == '*')    {
+        cout << "       " << value1 * value2 << endl;
+    }
+    else if (operatorr == '/')    {
+        cout << "       " << value1 / value2 << endl;
+    }
+    else    {
+        cout << "Only +, -, *, / operations are supported!" << endl;
+    }
+}
+
 int main()    {
     //check_integer_or_odd();
-    eligibility_for_vote();
+    //check_if_leap_year();
+    //eligibility_for_vote();
+    calculator();
     cout << "" << endl;
 }
 
