@@ -43,6 +43,7 @@ void determine_area()   {
 
 void grade_message()    {
     char verdict;
+    cout << "Tell me the grade letter you want to know the definition of: ";
     cin >> verdict;
     switch(verdict)    {
         case 'A' :
@@ -93,12 +94,10 @@ void leap_year()    {
 }
 
 
-
-
 int main()    {
     //grade_message();
-    leap_year();
-    //determine_area();
+    //leap_year();
+    determine_area();
     cout << "" << endl;
 }
 
