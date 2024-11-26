@@ -31,10 +31,11 @@ int main()  {
             odd_count++;
         }
     }
+    cout << endl;
     cout << "The maximum value is: " << maximum << endl;
     cout << "The minimum value is: " << minimum << endl;
     cout << "The number of even element: " << even_count << endl;
-    cout << "The number of odd element: " << even_count << endl;
+    cout << "The number of odd element: " << odd_count << endl;
     cout << endl;
     return 0;
 }
