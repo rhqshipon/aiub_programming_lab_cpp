@@ -18,10 +18,10 @@ int main()  {
     maximum = dataframe[0]; minimum = dataframe[0];
 
     for (iteration = 0; iteration < array_size; iteration++)      {
-        if (maximum < dataframe[iteration])     {
+        if (dataframe[iteration] > maximum)     {
             maximum = dataframe[iteration];
         }
-        if (minimum > dataframe[iteration])     {
+        if (dataframe[iteration] < minimum)     {
             minimum = dataframe[iteration];
         }
         if ((int)dataframe[iteration] % 2 == 0)     {

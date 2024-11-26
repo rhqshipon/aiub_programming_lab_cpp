@@ -17,25 +17,25 @@ int main()  {
 
     switch(choice)      {
         case 1 :
-            cout << "How many cup of Coffee do you need? ";
+            cout << "Enter the quantity: ";
             cin >> quantity;
             cout << "Please pay $" << 2.50 * quantity << endl;
             break;
 
         case 2 :
-            cout << "How many cup of Tea do you need? ";
+            cout << "Enter the quantity: ";
             cin >> quantity;
             cout << "Please pay $" << 1.50 * quantity << endl;
             break;
 
         case 3 :
-            cout << "How many can of Soda do you need? ";
+            cout << "Enter the quantity: ";
             cin >> quantity;
             cout << "Please pay $" << 1.75 * quantity << endl;
             break;
 
         case 4 :
-            cout << "How many bottle of Water do you need? ";
+            cout << "Enter the quantity: ";
             cin >> quantity;
             cout << "Please pay $" << 1.00 * quantity << endl;
             break;
