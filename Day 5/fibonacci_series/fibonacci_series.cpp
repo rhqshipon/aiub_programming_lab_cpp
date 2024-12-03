@@ -13,5 +13,5 @@ int main()  {
         first_fibonacci_element = second_fibonacci_element;
         second_fibonacci_element = sum_of_fibonacci;
     }
-    cout << "Summition of the fibonacci series: " << sum_of_fibonacci - 1 << endl;
+    cout << "Summation of the fibonacci series: " << sum_of_fibonacci - 1 << endl;
 }
