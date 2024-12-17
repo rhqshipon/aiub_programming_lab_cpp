@@ -8,7 +8,8 @@ int main() {
     cout << "[2] Matrix subtraction" << endl;
     cout << "[3] Matrix multiplication" << endl;
     cout << "[4] Matrix division (undefined, will exit)" << endl;
-    cout << "[5] Print an input matrix" << endl;
+    cout << "[5] Trace of Matrix (for both diagonal sides)" << endl;
+    cout << "[6] Print an input matrix" << endl;
     cout << "Enter your choice: ";
     cin >> choice;
 
@@ -32,7 +33,7 @@ int main() {
     }
 
     // Input for the second matrix (if applicable)
-    if (choice != 5) {
+    if (choice != 6) {
         cout << endl;
         cout << "Number of rows for the 2nd matrix: ";
         cin >> row_b;
@@ -142,12 +143,38 @@ int main() {
                         }
                         cout << endl;
                     }
-                } else {
+                }
+                else {
                     cout << "Matrix B must be square to perform division!" << endl;
                     return 1;
                 }
                 break;
 
+            case 5:
+                if (row_a == column_a) {
+                    int right_sum = 0, left_sum = 0;
+
+                    for (int i = 0; i < row_a; i++) {
+                        for (int j = 0; j < column_a; j++) {
+                            if (i == j) {
+                                left_sum += a[i][j];
+                            }
+                            if (i + j == row_a - 1) {
+                                right_sum += a[i][j];
+                            }
+                        }
+                    }
+                    // Display the results
+                    cout << endl;
+                    cout << "Sum of the left diagonal (primary diagonal): " << left_sum << endl;
+                    cout << "Sum of the right diagonal (secondary diagonal): " << right_sum << endl;
+                }
+
+                else {
+                    cout << "Error: Number of columns in 1st matrix must equal number of rows in 2nd matrix!" << endl;
+                    return 1;
+                }
+                break;
             default:
                 cout << "Invalid choice!" << endl;
                 return 1;
@@ -155,15 +182,16 @@ int main() {
 
         // Output resultant matrix
         cout << endl;
-        cout << "Output Matrix:" << endl;
-        cout << endl
-        for (int i = 0; i < row_a; i++) {
-            for (int j = 0; j < column_b; j++) {
-                cout << " " << c[i][j];
-            }
-            cout << endl;
-        }
-        cout << endl
+        //cout << "Output Matrix:" << endl;
+        //cout << endl;
+        //for (int i = 0; i < row_a; i++) {
+            //for (int j = 0; j < column_b; j++) {
+                //cout << " " << c[i][j];
+            //}
+            //cout << endl;
+        //}
+        cout << endl;
+
     }
     else { // Print the input matrix
         cout << endl;
