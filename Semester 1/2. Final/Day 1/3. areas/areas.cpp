@@ -34,7 +34,7 @@ void area_orchestrator()    {
         case 2 :
             cout << "Give me the length of dimension: ";
             cin >> dimension1;
-            area = dimension1*dimension1;
+            //area = dimension1*dimension1;
             cout << "The area is: " << square(dimension1) << " square units" << endl;
             break;
         case 3 :
